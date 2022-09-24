@@ -15,21 +15,27 @@ Comment
 ... partir à/veres [#arrival]
 ... faire route vers [#arrival]
 ... me/se rendre à/vers [#arrival]
-... me/se rendre à/vers [#arrival]
-
+... me/se diriger à/vers [#arrival] 
+Depuis [#departure] ...
+En partant de [#departure] ...
 
 Je ... aller de [#departure] à/vers [#arrival] 
 Comment ... de [#departure] à/vers [#arrival] 
 Donne-moi un trajet entre [#departure] et [#arrival]
 Quel est le trajet [#departure]-[#arrival]
-se diriger à/vers [#arrival] 
-
-Depuis [#departure] ...
-En partant de [#departure] ...
-
 
 ... en train
 ... le plus rapidement possible
 ... le plus vite possible
 
-
+En partant de {{from}} je veux aller à {{to}}
+Aller à {{to}} depuis {{from}}
+Aller vers {{to}} depuis {{from}}
+Aller voir {{to}} en partant de {{from}}
+Depart {{from}} arrivée {{to}}
+De {{from}} à {{to}}
+Depuis {{from}} vers {{to}}
+Direction {{to}} depuis {{from}}
+Partir en direction de {{to}} depuis {{from}}
+Destination {{to}} depuis {{from}}
+Découvrir {{to}} en partant de {{from}}
