@@ -1,4 +1,7 @@
-def generate_data():
+import os
+
+
+def generate_data(file_path):
     starts = [
         "Je veux savoir", "Je souhaite savoir", "J'aimerais savoir",
         "Je voudrais savoir", "Puis-je savoir", "Dis-moi", "Saurais-tu",
@@ -87,9 +90,11 @@ def generate_data():
 
     data += uniques
 
-    with open('travel_order_data.csv', 'w') as f:
+    with open(file_path, 'w') as f:
         f.write("\n".join(data))
 
 
 if __name__ == "__main__":
-    generate_data()
+    dir_name = os.path.dirname(__file__)
+    file_path = os.path.join(dir_name, '../data/travel_order_data.csv')
+    generate_data(file_path)
