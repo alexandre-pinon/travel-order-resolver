@@ -28,8 +28,11 @@ def generate_data(file_path):
     joins = ["à", "vers"]
     departure = "{{DEPARTURE}}"
     arrival = "{{ARRIVAL}}"
+    step = "{{STEP}}"
 
     ends = ["depuis", "en partant de"]
+
+    via = ["en passant par", "en m'arrêtant à", "en faisant un arrêt à"]
 
     # Je veux savoir comment aller à {{ARRIVAL}} depuis {{DEPARTURE}}...
     data = [
@@ -76,6 +79,12 @@ def generate_data(file_path):
     data += [
         f"{start} {arrival} {end} {departure}" for start in starts
         for end in ends
+    ]
+
+    # ... passant par {{STEP}}
+    data += [ 
+        f"{d} {v} {step}"
+        for d in data for v in via
     ]
 
     uniques = [
