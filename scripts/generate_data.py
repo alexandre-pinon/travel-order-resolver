@@ -29,10 +29,14 @@ def generate_data(file_path):
     departure = "{{DEPARTURE}}"
     arrival = "{{ARRIVAL}}"
     step = "{{STEP}}"
+    hourAndMinutes = "{{HOURANDMINUTES}}"
 
     ends = ["depuis", "en partant de"]
 
     via = ["en passant par", "en m'arrêtant à", "en faisant un arrêt à"]
+
+    times = ["en partant", "pour arriver"]
+
 
     # Je veux savoir comment aller à {{ARRIVAL}} depuis {{DEPARTURE}}...
     data = [
@@ -79,6 +83,12 @@ def generate_data(file_path):
     data += [
         f"{start} {arrival} {end} {departure}" for start in starts
         for end in ends
+    ]
+
+    # ... en partant à/vers {{HOURANDMINUTES}}
+    data += [ 
+        f"{d} {time} {join} {hourAndMinutes}"
+        for d in data for time in times for join in joins
     ]
 
     # ... passant par {{STEP}}
